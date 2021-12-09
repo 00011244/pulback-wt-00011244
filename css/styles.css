@@ -841,4 +841,127 @@ a.text-main:focus {
       transform: rotate(360deg);
     }
   }
+
+  
+/*---------------------------------------
+  RESPONSIVE STYLES               
+-----------------------------------------*/
+@media screen and (min-width: 1600px) {
+    .news-two-column {
+      min-height: 232.5px;
+    }
+  }
+  
+  @media screen and (max-width: 991px) {
+    h1 {
+      font-size: 48px;
+    }
+  
+    h2 {
+      font-size: 36px;
+    }
+  
+    h3 {
+      font-size: 32px;
+    }
+  
+    h4 {
+      font-size: 28px;
+    }
+  
+    h5 {
+      font-size: 20px;
+    }
+  
+    h6 {
+      font-size: 18px;
+    }
+  
+    .navbar {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  
+    .section-padding {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  
+    .team-thumb {
+      left: 0;
+      width: auto;
+    }
+  
+    .news-two-column {
+      height: auto !important;
+      min-height: inherit;
+    }
+  
+    .news .col-12 .news-two-column:first-child {
+      margin-bottom: 38px;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .news-detail-title {
+      font-size: 36px;
+    }
+  }
+  
+  @media screen and (max-width: 360px) {
+    h1 {
+      font-size: 32px;
+    }
+  
+    .heroText p {
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (max-width: 359px) {
+    .news-detail-title {
+      font-size: 22px;
+    }
+  }
+  
+  .navbar-brand img {
+    width: 12rem;
+    height: auto;
+  }
+  
+  .custom-input {
+    border: 0;
+    background: #ededed;
+    padding: 0.7rem 0.75rem;
+    border-radius: 0.4rem;
+    width: 100%;
+  }
+  
+  .cashback-calculator-result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cashback-calculator-result > div {
+    padding: 6rem 8rem;
+    background-color: #e2a90059;
+    border-radius: 0.3rem;
+    text-align: center;
+  }
+  
+  #currency-calculator .currency-table-wrapper {
+    padding: 3rem;
+    background-color: #ffc761;
+    border-radius: 0.3rem;
+    text-align: center;
+  }
+  
+  #link-generator .section-description {
+    max-width: 27rem;
+  }
+  
+  #link-generator .btn-main {
+    max-width: 24rem;
+  }
   
