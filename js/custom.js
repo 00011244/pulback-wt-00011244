@@ -69,4 +69,30 @@ function numberFormat(value) {
       renderTableBody();
     });
   })();
+
+// Link generator
+(function () {
+    const btnEl = document.getElementById('link-copy-button');
+    const tooltip = new bootstrap.Tooltip(btnEl);
+    const linkEl = document.getElementById('generated-link');
   
+    function generateLink() {
+      let link = 'get.pulback.com/';
+      link += (Math.random() + 1).toString(36).substring(6).toUpperCase();
+  
+      linkEl.textContent = link;
+    }
+  
+    generateLink();
+  
+    btnEl.addEventListener('click', function () {
+      const tooltipEl = document.getElementById(btnEl.getAttribute('aria-describedby'));
+  
+      navigator.clipboard.writeText(linkEl.innerText);
+  
+      tooltipEl.querySelector('.tooltip-inner').textContent = 'Copied!';
+      tooltip.update();
+    });
+  
+    document.getElementById('link-generate-btn').addEventListener('click', generateLink);
+  })();
