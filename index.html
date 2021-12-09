@@ -539,6 +539,68 @@
         </section>
     </footer>
 
+            <!-- Modals -->
+
+            <div class="modal fade" id="transfer-money-modal" tabindex="-1" aria-labelledby="transfer-money-modal-label" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="form-window">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h2 class="modal-title">Sent to</h2>
+                            </div>
+    
+                            <form class="needs-validation mt-4" id="transfer-money-modal-form" novalidate>
+                                <div>
+                                    <input class="custom-input" type="text" pattern="\d{16,16}" placeholder="Сredit card number" required>
+                                    <div class="invalid-feedback">
+                                        Please provide valid credit card number.
+                                    </div>
+                                </div>
+                                <div>
+                                    <input class="custom-input mt-3" type="text" placeholder="Your full name" required>
+                                    <div class="invalid-feedback">
+                                        This field is required.
+                                    </div>
+                                </div>
+                                <div>
+                                    <input class="custom-input mt-3" type="number" placeholder="Amount" min="10" max="3000000" required>
+                                    <div class="invalid-feedback">
+                                        Please provide valid data.
+                                    </div>
+                                </div>
+    
+                                <h5 class="mt-4">Enter number linked to your card</h5>
+                                <div>
+                                    <input class="custom-input mt-1" value="+998" type="text" pattern="\+[998][0-9]{11}" placeholder="Phone number" required>
+                                    <div class="invalid-feedback">
+                                        Please provide valid phone number.
+                                    </div>
+                                </div>
+                                <input type="submit" value="Send!" class="btn btn-main w-100 fw-bold fs-5 mt-4">
+                            </form>
+    
+                            <div class="footer-message">
+                                <img src="./images/secure.png" class="img-fluid" alt="secure message">
+                            </div>
+                        </div>
+                        <div class="success-window d-none">
+                            <div class="mx-4">
+                                <h3>DONE!</h3>
+                                <b class="fs-5 mt-2">We have sent you direct link to confirm transfer via SMS to your number.</b>
+                            </div>
+                            <button class="btn btn-main w-100 fw-bold fs-5 mt-5">Done</button>
+                        </div>
+    
+                        <div class="loading-window d-none">
+                            <div class="loading-spinner"><div></div><div></div><div></div><div></div></div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
     <!-- JAVASCRIPT FILES -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/custom.js"></script>

@@ -756,3 +756,89 @@ a.text-main:focus {
     color: rgba(255, 255, 255, 0.45);
     font-size: var(--copyright-text-font-size);
   }
+
+  /** Modals **/
+#transfer-money-modal .modal-title {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  #transfer-money-modal .modal-body {
+    padding: 3rem 3rem 1.5rem;
+    position: relative;
+    min-height: 567px;
+  }
+  
+  #transfer-money-modal .btn-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+  
+  #transfer-money-modal .success-window {
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #transfer-money-modal .loading-window {
+    min-height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #transfer-money-modal .success-window h3 {
+    color: #56c28f;
+  }
+  
+  #transfer-money-modal .footer-message img {
+    width: 13rem;
+    display: block;
+    margin: 1rem auto 0;
+  }
+
+/** Loading spinner **/
+.loading-spinner {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  
+  .loading-spinner div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid var(--primary-color);
+    border-radius: 50%;
+    animation: loading-spinner-animation 1.2s cubic-bezier(0.5, 0, 0.5, 1)
+      infinite;
+    border-color: var(--primary-color) transparent transparent transparent;
+  }
+  
+  .loading-spinner div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  
+  .loading-spinner div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  
+  .loading-spinner div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  
+  @keyframes loading-spinner-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

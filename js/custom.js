@@ -114,3 +114,38 @@ function numberFormat(value) {
   
     document.getElementById('link-generate-btn').addEventListener('click', generateLink);
   })();
+
+  // Handle transfer money modal form
+(function () {
+    const bsModal = new bootstrap.Modal(document.getElementById('transfer-money-modal'));
+  
+    const formWindow = document.querySelector('.form-window');
+    const loadingWindow = document.querySelector('.loading-window');
+    const successWindow = document.querySelector('.success-window');
+  
+    const formEl = document.getElementById('transfer-money-modal-form');
+  
+    formEl.addEventListener('submit', function (event) {
+      event.preventDefault();
+  
+      if(!formEl.checkValidity()) {
+        return;
+      }
+  
+      formWindow.classList.add('d-none');
+      loadingWindow.classList.remove('d-none');
+  
+      setTimeout(function () {
+        loadingWindow.classList.add('d-none');
+        successWindow.classList.remove('d-none');
+      }, 2000)
+    })
+  
+    document.querySelector('.success-window button').addEventListener('click', function () {
+      successWindow.classList.add('d-none');
+      formWindow.classList.remove('d-none');
+      formEl.classList.remove('was-validated');
+      formEl.reset();
+      bsModal.hide();
+    })
+  })();
