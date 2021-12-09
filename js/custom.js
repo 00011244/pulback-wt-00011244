@@ -27,3 +27,46 @@ function numberFormat(value) {
       })
     })
   })();
+
+  // Currency calculator
+(function () {
+    const rates = {
+      usd: 10769,
+      rub: 146,
+      eur: 12166,
+      gbp: 14280
+    };
+  
+    const inputEl = document.querySelector('#currency-calculator .custom-input');
+  
+    function renderTableBody() {
+      const oldTbodyEl = document.querySelector('#currency-calculator #currency-table tbody');
+      if (oldTbodyEl !== null) {
+        oldTbodyEl.remove();
+      }
+  
+      const tbodyEl = document.createElement('tbody');
+  
+      Object.keys(rates).forEach(function (itemKey) {
+        const rowEl = document.createElement('tr');
+        const resultEl = document.createElement('td');
+        resultEl.textContent = +(inputEl.value / rates[itemKey]).toFixed(2) + ' ' + itemKey.toUpperCase();
+  
+        const rateEl = document.createElement('td');
+        rateEl.textContent = rates[itemKey] + ' UZS';
+  
+        rowEl.append(resultEl, rateEl)
+        tbodyEl.appendChild(rowEl);
+      });
+  
+      document.getElementById('currency-table').appendChild(tbodyEl)
+    }
+  
+    renderTableBody();
+  
+    inputEl.addEventListener('input', function () {
+      inputEl.value = inputEl.value.slice(0, 9)
+      renderTableBody();
+    });
+  })();
+  

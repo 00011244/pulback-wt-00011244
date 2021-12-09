@@ -446,3 +446,24 @@
     border-radius: 0.3rem;
     text-align: center;
   }
+
+
+/*---------------------------------------
+  CURRENCY CALCULATOR            
+-----------------------------------------*/
+
+  #currency-calculator .currency-table-wrapper {
+    padding: 3rem;
+    background-color: #ffc761;
+    border-radius: 0.3rem;
+    text-align: center;
+  }
+  .custom-input {
+    border: 0;
+    background: #ededed;
+    padding: 0.7rem 0.75rem;
+    border-radius: 0.4rem;
+    width: 100%;
+  }
+  
+  
