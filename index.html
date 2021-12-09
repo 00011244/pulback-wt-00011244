@@ -188,6 +188,52 @@
     </div>
 </section>
         
+<section class="section-padding" id="cashback-calculator">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>CASHBACK CALCULATOR</h3>
+                <div class="fs-5 my-2">
+                    Your every operation in PULback app gives you cashback. 
+                    This is all real money. 
+                    Let's calulate how much you can get every month
+                </div>
+
+                <div class="fs-5 fw-bold">
+                    <div>I spend for communal payments (3% cashback)</div>
+                    <label for="communal-payments-range" class="my-1">
+                        <span>0</span> UZS
+                    </label>
+                    <input id="communal-payments-range" value="0" type="range" class="form-range" min="0" max="3000000" data-cashback-percent="3">
+                </div>
+                <div class="fs-5 fw-bold">
+                    <div>I transfer everymonth (5% cashback)</div>
+                    <label for="tranfser-range" class="my-1">
+                        <span>0</span> UZS
+                    </label>
+                    <input id="tranfser-range" value="0" type="range" class="form-range" min="0" max="3000000" data-cashback-percent="5">
+                </div>
+                <div class="fs-5 fw-bold">
+                    <div>I pay in places (6% cashback)</div>
+                    <label for="payment-in-places-range" class="my-1">
+                        <span>0</span> UZS
+                    </label>
+                    <input id="payment-in-places-range" value="0" type="range" class="form-range" min="0" max="3000000" data-cashback-percent="6">
+                </div>
+            </div>
+            <div class="col-md-6 cashback-calculator-result">
+                <div>
+                    <h4>YOU WILL GET</h4>
+                    <h4>
+                        <span id="cashback-sum">0</span> UZS
+                    </h4>
+                    <h5>EACH MONTH</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
         
         </main>
 

@@ -430,3 +430,19 @@
     padding-top: 7rem;
     padding-bottom: 7rem;
   }
+
+  ------------------/* 
+  CASHBACK CALCULATOR
+  ------------------*/
+  .cashback-calculator-result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cashback-calculator-result > div {
+    padding: 6rem 8rem;
+    background-color: var(--primary-color);
+    border-radius: 0.3rem;
+    text-align: center;
+  }
