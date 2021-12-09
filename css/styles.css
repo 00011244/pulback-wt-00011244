@@ -216,4 +216,39 @@
     font-weight: var(--font-weight-bold);
   }
 
+  /*---------------------------------------
+  Pulback  Header   
+-----------------------------------------*/
+.pulback {
+    position: relative;
+    overflow: hidden;
+    background-image: url("images/background.png");
+  }
   
+  @media screen and (min-width: 992px) {
+    .pulback {
+      height: 100vh;
+    }
+  
+    .custom-video,
+    .news-detail-image {
+      object-fit: cover;
+      width: 100vw;
+      height: 100vh;
+    }
+  
+    .sticky-wrapper {
+      position: relative;
+      bottom: 76px;
+    }
+  }
+  
+  .pulbackText {
+    position: absolute;
+    z-index: 9;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+  }
