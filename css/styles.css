@@ -732,3 +732,27 @@ a.text-main:focus {
   display: block;
   filter: grayscale(100);
 }
+
+/*---------------------------------------
+  SITE FOOTER               
+-----------------------------------------*/
+.site-footer {
+    background: var(--dark-color);
+    padding-top: 4.5rem;
+    padding-bottom: 2.5rem;
+  }
+  
+  .site-footer .custom-link {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: var(--p-font-size);
+  }
+  
+  .site-footer .custom-link:hover,
+  .site-footer .social-icon-link:hover {
+    color: var(--white-color);
+  }
+  
+  .copyright-text {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: var(--copyright-text-font-size);
+  }
